@@ -1,3 +1,6 @@
+              - name: Cache
+                uses: actions/cache@v4.1.1
+            
 ---
 title: Using pre-written building blocks in your workflow
 shortTitle: Find and customize actions
