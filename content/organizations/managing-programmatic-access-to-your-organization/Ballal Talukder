@@ -1,0 +1,35 @@
+## About Registering GitHub Apps
+
+You can register a GitHub App in various ways:
+
+- **Personal Account:** Register the app under your personal GitHub account.
+- **Organization:** Register the app under an organization you own or manage.
+- **Enterprise:** Register the app under your enterprise account, but it can only be installed on organizations within the enterprise.
+
+> **Note:** You can register up to 100 GitHub Apps per account.
+
+## Steps to Register a GitHub App
+
+1. Navigate to the GitHub Apps settings.
+2. Click **New GitHub App**.
+3. Enter a **Name** for your app. The name must be unique across GitHub and cannot exceed 34 characters.
+4. (Optional) Enter a **Description** for your app. This description will be visible to users and organizations when they install your app.
+5. Enter the **Homepage URL** for your app. If you don't have a dedicated URL, you can use the URL of your public repository.
+6. (Optional) Enter up to 10 **Callback URLs**. These URLs will be used to redirect users after they authorize the installation. For more details, see [About the User Authorization Callback URL](/apps/creating-github-apps/setting-up-a-github-app/about-the-user-authorization-callback-url).
+7. (Optional) Configure user authorization and device flow settings.
+8. (Optional) Enter a **Setup URL** to guide users through additional setup steps after installation.
+9. Configure **Webhook** settings and permissions as needed.
+10. Select where the GitHub App can be installed: **Only on this account** or **Any account**.
+11. Click **Create GitHub App**.
+
+## Next Steps
+
+After registering your GitHub App, you will want to write code to make it functional. Here are some resources to get you started:
+
+- [Quickstart for GitHub Apps](/apps/creating-github-apps/writing-code-for-a-github-app/quickstart)
+- [Building a GitHub App that Responds to Webhook Events](/apps/creating-github-apps/guides/building-a-github-app-that-responds-to-webhook-events)
+- [Building a Login with GitHub Button](/apps/creating-github-apps/guides/building-a-login-with-github-button-with-a-github-app)
+
+For best practices and further guidance, see [Best Practices for Creating a GitHub App](/apps/creating-github-apps/setting-up-a-github-app/best-practices-for-creating-a-github-app).
+
+You can always modify the settings for your GitHub App. For more information, see [Modifying a GitHub App](/apps/maintaining-github-apps/modifying-a-github-app).
