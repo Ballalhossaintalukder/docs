@@ -32,11 +32,11 @@ You need pay to use {% data variables.product.prodname_AS %} features in private
 
 ## License types for {% data variables.product.prodname_AS %} products
 
-Licensing for {% data variables.product.prodname_AS %} products is flexible, making it easy for you to choose options that fit your business needs. {% ifversion ghec or ghes %}You can buy volume/subscription licenses for any combination of the following products or use metered billing to pay for your use:{% endif %}
+{% data variables.product.prodname_AS %} consists of two main products:
 
 {% data reusables.advanced-security.ghas-products-bullets+ghas %}
 
-For example, you might start by using {% data variables.product.prodname_GH_secret_protection %} across all repositories, and pilot {% data variables.product.prodname_GH_code_security %} in high-risk repositories. You {% ifversion ghec or ghes %}buy or {% endif %}pay only for the products you need, and expand as you see the benefits to the security of your code.
+Licensing for {% data variables.product.prodname_AS %} products is flexible, making it easy for you to choose options that fit your business needs. For example, you might start by using {% data variables.product.prodname_GH_secret_protection %} across all repositories, and pilot {% data variables.product.prodname_GH_code_security %} in high-risk repositories. You buy or pay only for the products you need, and expand as you see the benefits to the security of your code.
 
 For more information, see [feature summary and pricing information](https://github.com/enterprise/advanced-security#pricing) and [AUTOTITLE](/get-started/learning-about-github/about-github-advanced-security).
 
@@ -51,7 +51,7 @@ Each active committer to at least one repository with an {% data variables.produ
 
 There are two different ways to pay for licenses.
 
-* **Metered billing** {% ifversion ghec %}introduced from June 2024 onward{% elsif ghes %}available from {% data variables.product.prodname_ghe_server %} 3.13 onward with {% data variables.product.prodname_github_connect %}{% endif %}
+* **Metered billing** {% ifversion ghes %}available from {% data variables.product.prodname_ghe_server %} 3.13 onward with {% data variables.product.prodname_github_connect %}{% endif %}
 
   * Users can enable {% data variables.product.prodname_GH_cs_or_sp %} independently.
   * Monthly bill for the number of licenses used by active committers.
@@ -64,9 +64,10 @@ There are two different ways to pay for licenses.
 
 * **Volume/subscription billing** available for {% data variables.product.prodname_enterprise %} plans only
 
-  * Users must ask the sales team to set up billing.
   * Purchase a specific number of {% data variables.product.prodname_GHAS_cs_or_sp %} licenses that last for a defined period, typically at least a year.
   * If the usage of {% data variables.product.prodname_AS %} by active committers exceeds the number of licenses purchased, you need to purchase additional licenses to cover this overage usage.
+
+   If you want to purchase volume/subscription-based licenses, contact your account manager in {% data variables.contact.contact_enterprise_sales %} or contact {% data variables.contact.contact_support_page %}.
 
 ## Managing committers and costs
 
@@ -120,6 +121,8 @@ The number of unique, active committers who use {% data variables.product.prodna
 {% endif %} For information about differences between bot and machine accounts, see [AUTOTITLE](/apps/creating-github-apps/setting-up-a-github-app/differences-between-github-apps-and-oauth-apps#machine-vs-bot-accounts).
 * **Unique committers** is the number of active committers who contributed only to a repository, or to repositories in an organization. This number shows how many licenses you can free up by disabling {% data variables.product.prodname_GH_cs_or_sp %} for that repository or organization.
 
+> [!NOTE] When a repository is migrated to GitHub, GitHub Advanced Security only consumes licenses for commits and pushes made after migration, rather than considering all historic contributions from before the migration.
+
 If there are no unique committers to a repository or organization, all active committers also contribute to other repositories or organizations that use {% data variables.product.prodname_AS %} licenses. Disabling a product for that repository or organization would not free any licenses or lower your usage costs.
 
 ## Understanding usage
@@ -138,7 +141,7 @@ The following example timeline demonstrates how the active committer count for {
 | Date | Events during the month | Total committers | Effect on usage-based billing |
 | :- | :- | -: | :- |
 | <span style="white-space: nowrap;">April 15</span> | A member of your enterprise enables {% data variables.product.prodname_GH_cs_and_sp %} for repository **X**. Repository **X** has 50 committers over the past 90 days. | **50** | Billing begins for 50 committers. |
-| <span style="white-space: nowrap;">May 1</span> | Developer **A** leaves the team working on repository **X**. Developer **A**'s contributions continue to count for 90 days. | **50** | No immediate change. Developer **A** continues to be billed until their contributions are inactive for 90 days. |
+| <span style="white-space: nowrap;">May 1</span> | Developer **A** switches teams and stops committing to repository **X**. Developer **A**'s contributions continue to count for 90 days. | **50** | No immediate change. Developer **A** continues to be billed until their contributions are inactive for 90 days. |
 | <span style="white-space: nowrap;">August 1</span> | Developer **A**'s contributions no longer count towards the licenses required, because 90 days have passed. | 50 - 1 =<br>**49** | Developer **A** is removed from the billing count, reducing the billable committers to 49. |
 | <span style="white-space: nowrap;">August 15</span> | A member of your enterprise enables {% data variables.product.prodname_GH_cs_and_sp %} for a second repository, repository **Y**. In the last 90 days, a total of 20 developers contributed to that repository. Of those 20 developers, 10 also recently worked on repo **X** and do not require additional licenses. | 49 + 10 =<br>**59** | Billing increases to 59 committers, accounting for the 10 additional unique contributors. |
 | <span style="white-space: nowrap;">August 16</span> | A member of your enterprise disables {% data variables.product.prodname_GH_cs_and_sp %} for repository **X**. Of the 49 developers who were working on repository **X**, 10 still also work on repository **Y**, which has a total of 20 developers contributing in the last 90 days. | 49 - 29 =<br>**20** | Billing for repository **X** continues until the end of the monthly billing cycle, but the overall billing count decreases to 20 committers for the next cycle. |
