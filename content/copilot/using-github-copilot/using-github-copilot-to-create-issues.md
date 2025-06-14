@@ -19,9 +19,9 @@ You stay in control: review and refine what {% data variables.product.prodname_c
 
 ## Creating an issue with {% data variables.product.prodname_copilot_short %}
 
-You can create issues from {% data variables.product.prodname_copilot_chat_short %}'s immersive view.
+You can create issues from {% data variables.copilot.copilot_chat_short %}'s immersive view.
 
-1. Go to the immersive view of {% data variables.product.prodname_copilot_chat_short %} ([https://github.com/copilot](https://github.com/copilot)).
+1. Go to the immersive view of {% data variables.copilot.copilot_chat_short %} ([https://github.com/copilot](https://github.com/copilot)).
 1. At the bottom of the page, in the "Ask {% data variables.product.prodname_copilot_short %}" box, describe what you want to file.  Specify the repository you would like to create your issue in using the org/repository format. If you do not specify a repository, {% data variables.product.prodname_copilot_short %} will infer the repository based on the repository you last created an issue in. You can try:
 
    * "Create a feature request to add fuzzy matching to search."
@@ -63,7 +63,7 @@ Each draft appears separately, and you can review and edit them individually. To
 
 ## Assigning issues to {% data variables.product.prodname_copilot_short %}
 
-To assign an issue to {% data variables.product.prodname_copilot_short %}, you need to have {% data variables.copilot.copilot_coding_agent %} enabled. See [AUTOTITLE](/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks/enabling-copilot-coding-agent).
+To assign an issue to {% data variables.product.prodname_copilot_short %}, you need to have {% data variables.copilot.copilot_coding_agent %} enabled. See [AUTOTITLE](/copilot/using-github-copilot/coding-agent/enabling-copilot-coding-agent).
 
 You can assign the issue during creation in one of two ways:
 

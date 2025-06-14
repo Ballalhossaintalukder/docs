@@ -28,9 +28,9 @@ product: '{% data reusables.gated-features.copilot-coding-agent %}'
 
 ## How {% data variables.copilot.copilot_coding_agent %} can contribute to your organization
 
-{% data variables.product.prodname_copilot_short %} can help your organization address well-defined and scoped issues, such as increasing test coverage, fixing bugs or flaky tests, or updating config files or documentation. For more on the kinds of issues {% data variables.product.prodname_copilot_short %} works best on, see [AUTOTITLE](/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks/best-practices-for-using-copilot-to-work-on-tasks).
+{% data variables.product.prodname_copilot_short %} can help your organization address well-defined and scoped issues, such as increasing test coverage, fixing bugs or flaky tests, or updating config files or documentation. For more on the kinds of issues {% data variables.product.prodname_copilot_short %} works best on, see [AUTOTITLE](/copilot/using-github-copilot/coding-agent/best-practices-for-using-copilot-to-work-on-tasks).
 
-Developers stay in the flow when they ask {% data variables.product.prodname_copilot_short %} to create pull requests directly from {% data variables.product.prodname_copilot_chat_short %} instead of opening issues that may sit in a backlog.
+Developers stay in the flow when they ask {% data variables.product.prodname_copilot_short %} to create pull requests directly from {% data variables.copilot.copilot_chat_short %} instead of opening issues that may sit in a backlog.
 
 When used effectively, {% data variables.copilot.copilot_coding_agent %} offers productivity benefits over traditional AI assistants in IDEs:
 
@@ -85,7 +85,7 @@ All AI models are trained to meet a request, even if they don't have all the inf
 
 <a href="https://github.com/github-copilot/purchase?ref_cta=Copilot+Enterprise+trial&ref_cta=Copilot+Business+trial&ref_loc=using-cca-effectively" target="_blank" class="btn btn-primary mt-3 mr-3 no-underline"><span>Sign up for {% data variables.product.prodname_copilot_short %}</span> {% octicon "link-external" height:16 aria-label="link-external" %}</a>
 
-> [!TIP] During the {% data variables.release-phases.public_preview %}, you need {% data variables.product.prodname_copilot_pro_plus %} or {% data variables.product.prodname_copilot_enterprise %} to use {% data variables.copilot.copilot_coding_agent %}.
+> [!TIP] During the {% data variables.release-phases.public_preview %}, you need {% data variables.copilot.copilot_pro_plus %} or {% data variables.copilot.copilot_enterprise %} to use {% data variables.copilot.copilot_coding_agent %}.
 
 As with any other change to working practices, it's important to run a trial to learn how to deploy {% data variables.copilot.copilot_coding_agent %} effectively in your organization or enterprise.
 
@@ -93,7 +93,7 @@ As with any other change to working practices, it's important to run a trial to 
 1. Choose an isolated or low-risk repository, for example, one that contains documentation or internal tools. You could create a fresh repository to use as a playground, but {% data variables.product.prodname_copilot_short %} needs context to be successful, so you would need to add a lot of context, including team processes, development environment, and common dependencies.
 1. Enable {% data variables.copilot.copilot_coding_agent %} in the repository and optionally enable third-party MCP servers for enhanced context sharing. See [AUTOTITLE](/copilot/managing-copilot/managing-github-copilot-in-your-organization/adding-copilot-coding-agent-to-organization).
 1. Create repository instructions and pre-install any tools required in the development environment {% data variables.product.prodname_copilot_short %} uses. See [AUTOTITLE](/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent).
-1. Identify a few compelling use cases for your organization, for example: test coverage or improving accessibility. See [Choose the right type of tasks to give to Copilot](/copilot/using-github-copilot/using-copilot-coding-agent-to-work-on-tasks/best-practices-for-using-copilot-to-work-on-tasks#choosing-the-right-type-of-tasks-to-give-to-copilot) in the best practice guide.
+1. Identify a few compelling use cases for your organization, for example: test coverage or improving accessibility. See [Choose the right type of tasks to give to Copilot](/copilot/using-github-copilot/coding-agent/best-practices-for-using-copilot-to-work-on-tasks#choosing-the-right-type-of-tasks-to-give-to-copilot) in the best practice guide.
 1. Use best practice to create or refine issues for {% data variables.product.prodname_copilot_short %} in your pilot repository.
 1. Assign issues to {% data variables.product.prodname_copilot_short %} and prepare team members to review its work.
 1. Spend time looking at the codebase or documentation in {% data variables.product.prodname_vscode_shortname %} or {% data variables.product.prodname_dotcom_the_website %}, asking {% data variables.product.prodname_copilot_short %} to create a pull request to fix any bugs or small improvements that you identify.
