@@ -18,13 +18,11 @@ shortTitle: Migrating to new GHAS SKUs
 
 ## New SKUs for {% data variables.product.prodname_AS %} features
 
-<!-- expires 2025-05-31 -->
+<!-- expires 2025-09-30 -->
 
-<!-- On expiry, check with the stakeholder. If nothing else, remove the date from the start of this paragraph and check the information for Metered-billing users is still appropriate. Possibly the whole article can be deleted. Reference: release 5202 -->
+{% data variables.product.prodname_AS %} features are also available under two separate stock keeping units (SKUs) for {% data variables.product.prodname_team %} and {% data variables.product.prodname_ghe_cloud %} users. {% data variables.product.prodname_ghe_server %} users can use the two new SKUs when upgrading to version 3.17.
 
-From April 1, 2025, {% data variables.product.prodname_AS %} features are also available under two separate stock keeping units (SKUs) for {% data variables.product.prodname_team %} and {% data variables.product.prodname_ghe_cloud %} users. {% data variables.product.prodname_ghe_server %} users can use the two new SKUs when upgrading to version 3.17.
-
-<!-- end expires 2025-05-31 -->
+<!-- end expires 2025-09-30 -->
 
 {% data reusables.advanced-security.ghas-products-bullets %}
 
@@ -63,9 +61,7 @@ If you already pay to use {% data variables.product.prodname_AS %} features, the
 
 {% ifversion ghec %}
 
-If you are an existing self-serve customer, instructions on how to transition from the combined {% data variables.product.prodname_GHAS %} product to the new {% data variables.product.prodname_GH_cs_and_sp %} SKUs will be announced over the next 30 days.
-
-You'll receive an email notification when the new plans are available to your enterprise. Transitioning to the two separate products will be self-serve and optional.
+If you are an existing self-serve customer and wish to transition from the combined {% data variables.product.prodname_GHAS %} product to the new {% data variables.product.prodname_GH_cs_and_sp %}, contact [GitHub Support](mailto:support@github.com).
 
 {% elsif ghes %}
 
@@ -77,7 +73,8 @@ If you have a hybrid {% data variables.product.prodname_ghe_cloud %} and {% data
 
 ### Volume/subscription billing users
 
-When your license is due for renewal, you can choose to continue with licenses for {% data variables.product.prodname_GHAS %}, migrate to {% data variables.product.prodname_cs_or_sp %} subscription licenses, or migrate to metered billing.
+* **Invoiced**: When your license is due for renewal, you can choose to continue with licenses for {% data variables.product.prodname_GHAS %}, migrate to {% data variables.product.prodname_cs_or_sp %} subscription licenses, or migrate to metered billing.
+* **Self-serve**: If you are an existing self-serve customer and wish to transition from the combined {% data variables.product.prodname_GHAS %} product to the new {% data variables.product.prodname_GH_cs_and_sp %}, contact [GitHub Support](mailto:support@github.com).
 
 ### Questions?
 
