@@ -788,7 +788,7 @@ When introducing a list, avoid short, nonspecific sentences using terms like “
 Use permission statements and product callouts to communicate tasks that require specific roles or products to complete.
 
 * [**Permissions statements**](/contributing/style-guide-and-content-model/contents-of-a-github-docs-article#permissions-statements): The role required to take an action or do a task described in the article. Example: "Enterprise owners."
-* [**Product callout**](/contributing/style-guide-and-content-model/contents-of-a-github-docs-article#product-callout): The product or products required to take an action or do a task described in the article. Example: "Organization and enterprise accounts with a subscription to {% data variables.product.prodname_copilot_business_short %}."
+* [**Product callout**](/contributing/style-guide-and-content-model/contents-of-a-github-docs-article#product-callout): The product or products required to take an action or do a task described in the article. Example: "Organization and enterprise accounts with a subscription to {% data variables.copilot.copilot_business_short %}."
 
 Together, permission statements and product callouts tell readers who can use the feature being described in an article.
 
@@ -809,6 +809,19 @@ If multiple roles or products apply to a permission statement or product callout
 #### Use inline links
 
 You can use inline links to provide more information about a role or product. The linked text must match the link destination so that it is clear where following the link will lead to.
+
+## Parenthetical dashes
+
+We use em dashes for parenthetical statements in normal body text. This doesn’t apply to text within code blocks.
+
+Examples:
+
+* ✅ Correct: "The cat—which sat on a branch—smiled with a broad grin." (em dash without spaces)
+* ❌ Incorrect: "The cat — which sat on a branch — smiled with a broad grin." (em dash with spaces)
+* ❌ Incorrect: "The cat–which sat on a branch–smiled with a broad grin." (en dash without spaces)
+* ❌ Incorrect: "The cat – which sat on a branch – smiled with a broad grin." (en dash with spaces)
+* ❌ Incorrect: "The cat-which sat on a branch-smiled with a broad grin." (hyphen without spaces)
+* ❌ Incorrect: "The cat - which sat on a branch - smiled with a broad grin." (hyphen with spaces)
 
 ## Placeholders
 
@@ -868,6 +881,12 @@ Do not capitalize commonly used features like pull requests, topics, or issues.
 ## Product-specific conventions
 
 This section describes additional conventions that are specific to GitHub products.
+
+### {% data variables.product.prodname_copilot %}
+
+#### {% data variables.product.prodname_copilot_short %} code completion
+
+The {% data variables.product.prodname_copilot_short %} feature that suggests code as you are working on a file is called "{% data variables.product.prodname_copilot_short %} code completion" or just "code completion" (singular). Only use "code suggestions" (plural) when referring to multiple instances of code completion suggestions. For example, "When using {% data variables.product.prodname_copilot_short %} code completion..." but "the plan includes 2,000 code completions..."
 
 ### {% data variables.product.prodname_actions %}
 
