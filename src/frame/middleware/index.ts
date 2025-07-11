@@ -13,19 +13,20 @@ import cookieParser from './cookie-parser'
 import {
   setDefaultFastlySurrogateKey,
   setLanguageFastlySurrogateKey,
-} from './set-fastly-surrogate-key.js'
+} from './set-fastly-surrogate-key'
 import handleErrors from '@/observability/middleware/handle-errors'
 import handleNextDataPath from './handle-next-data-path'
 import detectLanguage from '@/languages/middleware/detect-language'
 import reloadTree from './reload-tree'
 import context from './context/context'
-import shortVersions from '@/versions/middleware/short-versions.js'
+import shortVersions from '@/versions/middleware/short-versions'
 import languageCodeRedirects from '@/redirects/middleware/language-code-redirects'
 import handleRedirects from '@/redirects/middleware/handle-redirects'
-import findPage from './find-page.js'
+import findPage from './find-page'
 import blockRobots from './block-robots'
 import archivedEnterpriseVersionsAssets from '@/archives/middleware/archived-enterprise-versions-assets'
 import api from './api'
+import llmsTxt from './llms-txt'
 import healthcheck from './healthcheck'
 import manifestJson from './manifest-json'
 import buildInfo from './build-info'
@@ -62,8 +63,7 @@ import mockVaPortal from './mock-va-portal'
 import dynamicAssets from '@/assets/middleware/dynamic-assets'
 import generalSearchMiddleware from '@/search/middleware/general-search-middleware'
 import shielding from '@/shielding/middleware'
-import tracking from '@/tracking/middleware'
-import { MAX_REQUEST_TIMEOUT } from '@/frame/lib/constants.js'
+import { MAX_REQUEST_TIMEOUT } from '@/frame/lib/constants'
 
 const { NODE_ENV } = process.env
 const isTest = NODE_ENV === 'test' || process.env.GITHUB_ACTIONS === 'true'
@@ -200,7 +200,6 @@ export default function (app: Express) {
   }
 
   // ** Possible early exits after cookies **
-  app.use(tracking)
 
   // *** Headers ***
   app.set('etag', false) // We will manage our own ETags if desired
@@ -231,6 +230,7 @@ export default function (app: Express) {
 
   // *** Rendering, 2xx responses ***
   app.use('/api', api)
+  app.use('/llms.txt', llmsTxt)
   app.get('/_build', buildInfo)
   app.get('/_req-headers', reqHeaders)
   app.use(asyncMiddleware(manifestJson))
@@ -252,7 +252,7 @@ export default function (app: Express) {
 
   // Specifically deal with HEAD requests before doing the slower
   // full page rendering.
-  app.head('/*', fastHead)
+  app.head('/*path', fastHead)
 
   // *** Preparation for render-page: contextualizers ***
   app.use(asyncMiddleware(secretScanning))
@@ -284,7 +284,7 @@ export default function (app: Express) {
   app.use(haltOnDroppedConnection)
 
   // *** Rendering, must go almost last ***
-  app.get('/*', asyncMiddleware(renderPage))
+  app.get('/*path', asyncMiddleware(renderPage))
 
   // *** Error handling, must go last ***
   app.use(handleErrors)

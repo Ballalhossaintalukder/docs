@@ -151,13 +151,15 @@ To transfer a discussion, you must have permissions to create discussions in the
 
 ## Closing a discussion
 
-{% data reusables.discussions.closing-discussions %}
+You can close a discussion when the discussion has been resolved, is no longer relevant, or is a duplicate.
 
 {% data reusables.discussions.navigate-to-repo-or-org %}
 {% data reusables.discussions.discussions-tab %}
 {% data reusables.discussions.click-discussion-in-list %}
 1. At the bottom of the discussion, below the comment box, click **Close discussion**.
 1. Optionally, to change the reason for closing the discussion, select the {% octicon "triangle-down" aria-label="The down triangle octicon" %} dropdown next to "Close discussion" and click a reason.
+
+{% ifversion ghes < 3.18 %}
 
 ## Converting issues based on labels
 
@@ -169,3 +171,5 @@ You can convert all issues with the same label to discussions in bulk. Future is
 1. Next to the label you want to convert to issues, click **Convert issues**.
 1. Select the **Choose a category** drop-down menu, and click a category for your discussion.
 1. Click **I understand, convert this issue to a discussion**.
+
+{% endif %}

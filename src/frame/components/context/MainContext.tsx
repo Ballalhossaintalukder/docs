@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react'
 import pick from 'lodash/pick'
 
-import type { BreadcrumbT } from 'src/frame/components/page-header/Breadcrumbs'
-import type { FeatureFlags } from 'src/frame/components/hooks/useFeatureFlags'
+import type { BreadcrumbT } from '@/frame/components/page-header/Breadcrumbs'
+import type { FeatureFlags } from '@/frame/components/hooks/useFeatureFlags'
 
 export type ProductT = {
   external: boolean
@@ -54,6 +54,7 @@ export type ProductTreeNode = {
   title: string
   href: string
   childPages: Array<ProductTreeNode>
+  layout?: string
 }
 
 type UIString = Record<string, string>
@@ -90,7 +91,7 @@ export type MainContextT = {
   breadcrumbs: {
     product: BreadcrumbT
     category?: BreadcrumbT
-    maptopic?: BreadcrumbT
+    subcategory?: BreadcrumbT
     article?: BreadcrumbT
   }
   communityRedirect: {
@@ -147,7 +148,6 @@ const DEFAULT_UI_NAMESPACES = [
   'contribution_cta',
   'support',
   'rest',
-  'domain_edit',
   'cookbook_landing',
 ]
 

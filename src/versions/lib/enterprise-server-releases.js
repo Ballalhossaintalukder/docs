@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import semver from 'semver'
 
-import versionSatisfiesRange from './version-satisfies-range.js'
+import versionSatisfiesRange from './version-satisfies-range'
 
 export const dates = JSON.parse(await fs.readFile('src/ghes-releases/lib/enterprise-dates.json'))
 
@@ -15,7 +15,7 @@ export const nextNext = '3.19'
 export const supported = ['3.17', '3.16', '3.15', '3.14', '3.13']
 
 // Edit this to `null` when it's no longer the release candidate
-export const releaseCandidate = '3.17'
+export const releaseCandidate = null
 
 // Ensure that:
 // "next" is ahead of "latest" by one minor or major release.
