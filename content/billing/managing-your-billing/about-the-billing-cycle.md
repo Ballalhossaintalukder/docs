@@ -1,6 +1,6 @@
 ---
 title: About the billing cycle
-intro: Learn about the billing cycle for the new billing platform.
+intro: Learn about the billing cycle for the billing platform.
 versions:
   feature: enhanced-billing-platform
 redirect_from:
@@ -8,6 +8,7 @@ redirect_from:
   - /billing/using-the-billing-platform/viewing-your-subscriptions-and-billing-date
   - /billing/using-the-billing-platform/changing-the-duration-of-your-billing-cycle
   - /billing/using-the-new-billing-platform/viewing-your-subscriptions-and-billing-date
+  - /billing/using-the-new-billing-platform/about-the-billing-cycle
 type: overview
 topics:
   - Enterprise
@@ -22,7 +23,7 @@ Your billing experience depends on whether your products are metered, volume-bas
 
 ## Billing cycles for metered products
 
-If your {% data variables.enterprise.enterprise_or_org %} {% ifversion fpt %}or personal account{% endif %} uses the new billing platform for **metered** products, you have a fixed **billing period** that runs from the first day of each month to the last day of the month.
+Metered products have a fixed **billing period** that runs from the first day of each month to the last day of the month.
 
 At the end of each month, your metered usage is calculated and scheduled to be billed on your **bill cycle day**.
 
@@ -32,7 +33,7 @@ At the end of each month, your metered usage is calculated and scheduled to be b
 
 ## Billing cycles for volume-based products
 
-Volume-based licenses may follow a different billing cycle, even if your account is on the new billing platform. These products are often billed based on the anniversary date of your subscription rather than by calendar month.
+Volume-based licenses may follow a different billing cycle. These products are often billed based on the anniversary date of your subscription rather than by calendar month.
 
 ## How mid-cycle changes affect your billing
 

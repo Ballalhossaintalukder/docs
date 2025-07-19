@@ -22,6 +22,7 @@ To set up a trial of {% data variables.product.prodname_GHAS %} using this metho
 1. Be an owner of an enterprise account. See [AUTOTITLE](/enterprise-cloud@latest/admin/overview/about-enterprise-accounts).
 1. Pay by credit card or PayPal.
 1. Have not previously purchased or had a trial of {% data variables.product.prodname_GHAS %}.
+1. You must not use metered billing for {% data variables.product.prodname_GHAS %}.
 
 > [!TIP]
 > * **No enterprise account?** Start a trial of {% data variables.product.prodname_ghe_cloud %} with {% data variables.product.prodname_GHAS %}. See [AUTOTITLE](/enterprise-cloud@latest/admin/overview/setting-up-a-trial-of-github-enterprise-cloud).
@@ -30,7 +31,6 @@ To set up a trial of {% data variables.product.prodname_GHAS %} using this metho
 ## Setting up your trial of {% data variables.product.prodname_GHAS %}
 
 {% data reusables.enterprise-accounts.access-enterprise %}
-{% data reusables.enterprise-accounts.settings-tab %}
 {% data reusables.enterprise-accounts.licensing-tab-both-platforms %}
 1. To the right of "{% data variables.product.prodname_GHAS %}", click **Start free trial**.
 1. Click **Start trial**.

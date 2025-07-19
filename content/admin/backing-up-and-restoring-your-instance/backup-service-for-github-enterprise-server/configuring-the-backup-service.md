@@ -21,7 +21,7 @@ Before configuring the backup service, ensure you have:
 
 To ensure reliable and performant backups, your storage must meet the following requirements:
 
-* **Capacity:** Allocate at least five times the amount of storage used by your primary {% data variables.product.github %} appliance disk. This accounts for historical snapshots and future growth.
+* **Capacity:** Allocate at least five times the amount of storage used by your primary {% data variables.product.github %} appliance data disk. This accounts for historical snapshots and future growth.
 * **Filesystem support:** The backup service uses hard links for efficient storage, and your {% data variables.product.github %} instance uses symbolic links. The backup target must support both symbolic and hard links, and it must use a case-sensitive filesystem to prevent conflicts.
 
   You can test whether your filesystem supports hardlinking symbolic links by running:
@@ -63,7 +63,7 @@ If you're using a dedicated block device as your backup target, you need to init
     >[!WARNING] This command will permanently erase all data on the specified device. Double-check the device name and back up any important data before proceeding.
 
     ```shell
-    ghe-storage-init-backup /dev/YOUR_DEVICE_NAME
+    /usr/local/share/enterprise/ghe-storage-init-backup /dev/YOUR_DEVICE_NAME
     ```
 
     This command:

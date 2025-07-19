@@ -64,7 +64,7 @@ If undecryptable records are detected, you will be prompted whether you want to 
 If you have any questions during the upgrade, you can reach out to {% data variables.contact.github_support %}. Once you have had the time and opportunity to understand the impact, you can retrigger the upgrade.
 {% endif %}
 
-{% ifversion ghes > 3.13 and ghes < 3.17 %}
+{% ifversion ghes < 3.17 %}
 
 ## Upgrading from 3.14 to 3.16.0
 
@@ -78,5 +78,9 @@ Organization.any? { |o| [o.vulnerability_updates_enabled_for_new_repos?, o.secur
 If the command returns `true`, a direct upgrade from 3.14 to 3.16.0 will fail, and we recommend you wait for the next 3.16 patch to upgrade.
 
 Alternatively, you can move to 3.16.0 now by first upgrading from 3.14 to 3.15, then from 3.15 to 3.16.0.
+
+## Upgrading to 3.16.0 and 3.17.0 includes a slow data migration for code scanning
+
+Customers who have code scanning enabled may experience slower transitions when upgrading to version 3.16.0, due to changes in the data model that require data migration. We recommend testing this upgrade in a non-production environment first, as it could result in longer downtime than expected. [Updated: 2025-06-12]
 
 {% endif %}
